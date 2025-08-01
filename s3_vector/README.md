@@ -139,7 +139,33 @@ S3 Vectorsが「ベクトルデータを保存できるベクターストアの�
 
 ### S3 Vectorsのベクターバケットを作成する
 
-AWS CLIでやります。
+まずはデフォルトリージョンをS3 Vecotorsに対応しているリージョンに変更します。
+
+```bash
+export AWS_DEFAULT_REGION=us-west-2
+```
+
+バケット名にアカウントIDを含めるため、AWSアカウントIDを取得します。
+
+```bash
+export AWS_ACCOUNT_ID=`aws sts get-caller-identity --query "Account" --output text` && echo $AWS_ACCOUNT_ID
+```
+
+ベクターバケットを作成します。
+
+```bash
+aws s3vectors create-vector-bucket --vector-bucket-name my-vector-${AWS_ACCOUNT_ID}
+```
+
+```bash
+export S3_VECTOR_BUCKET_NAME=my-vector-${AWS_ACCOUNT_ID}
+```
+
+ベクターバケット名のみを取得します。
+
+```bash
+aws s3vectors list-vector-buckets --query "vectorBuckets[0].vectorBucketName" --output text
+```
 
 ### ベクターバケットにデータを格納
 
