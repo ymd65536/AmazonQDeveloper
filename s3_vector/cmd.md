@@ -24,6 +24,10 @@ S3 VectorsをAWS CLIで操作するためのコマンド一覧です。
 aws s3vectors create-vector-bucket --vector-bucket-name my-vector-${AWS_ACCOUNT_ID}
 ```
 
+```bash
+export S3_VECTOR_BUCKET_NAME=my-vector-${AWS_ACCOUNT_ID}
+```
+
 ベクターバケットの一覧を表示します。
 
 ```bash
