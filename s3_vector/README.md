@@ -177,14 +177,14 @@ todo: 執筆時点におけるLambdaは"boto3 version:1.38.36"であるため、
 
 AWS CDKでやります。
 
-### AWS ToolkitでLambdaを修正する
-
-※AWS CDKでデプロイしたLambdaはAWS Toolkitではなく、AWS CDKで修正したほうが良いですが、今回はお試し
-
 ## おまけ：AWSでイイ感じのリモート開発環境を構築して優勝する
 
 ハンズオンは以上ですが、さらにイイ感じの開発環境で今回のハンズオンを実践していく話を書きます。（書きたいだけです）
 具体的にはAmazon CodeCatalystでビッグウェーブを作り、Amazon Q Developerでバイブスを上げるという話です。Amazon フォーーーーーーーーー！！！！！！
+
+### AWS ToolkitでLambdaを修正する
+
+※AWS CDKでデプロイしたLambdaはAWS Toolkitではなく、AWS CDKで修正したほうが良いですが、今回はお試し
 
 ## 片付け方法
 
