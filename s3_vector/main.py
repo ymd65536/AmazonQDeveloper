@@ -115,6 +115,26 @@ def query_vectors(
     return response
 
 
+def put_vectors(
+        bucket_name: str,
+        index_name: str,
+        vectors: list):
+    """
+    Upload vectors to the S3 Vector index.
+    """
+    s3_vectors = boto3.client('s3vectors', region_name='us-west-2')
+
+    try:
+        s3_vectors.put_vectors(
+            vectorBucketName=bucket_name,
+            indexName=index_name,
+            vectors=vectors
+        )
+        print("Vectors uploaded successfully.")
+    except Exception as e:
+        print(f"Error uploading vectors: {e}")
+
+
 if __name__ == "__main__":
     print(f"boto3 version:{boto3.__version__}")
     print("Starting S3 Vector setup...")
@@ -134,18 +154,19 @@ if __name__ == "__main__":
     print("Uploading embeddings to S3 Vector index...")
     s3_vectors = boto3.client('s3vectors', region_name='us-west-2')
 
-    try:
-        s3_vectors.put_vectors(
-            vectorBucketName=os.environ.get(
-                'S3_VECTOR_BUCKET_NAME', 's3-vector-bucket'),
-            indexName='sample-index',
-            vectors=[
-                {"key": "v1", "data": {"float32": embedding_results[0]}, "metadata": {"id": "key1", "source_text": sample_texts[0], "genre": "scifi"}},
-                {"key": "v2", "data": {"float32": embedding_results[1]}, "metadata": {"id": "key2", "source_text": sample_texts[1], "genre": "scifi"}}
-            ]
-        )
-    except Exception as e:
-        print(f"Error uploading vectors: {e}")
+    vectors = [
+        {"key": "v1", "data": {"float32": embedding_results[0]}, "metadata": {
+            "id": "key1", "source_text": sample_texts[0], "genre": "scifi"}},
+        {"key": "v2", "data": {"float32": embedding_results[1]}, "metadata": {
+            "id": "key2", "source_text": sample_texts[1], "genre": "scifi"}}
+    ]
+
+    put_vectors(
+        bucket_name=os.environ.get(
+            'S3_VECTOR_BUCKET_NAME', 's3-vector-bucket'),
+        index_name='sample-index',
+        vectors=vectors
+    )
 
     query_text = "List the movies about adventures in space"
     embedding_query_text = create_embedding_query_text(query_text)
