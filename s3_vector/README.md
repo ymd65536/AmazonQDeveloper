@@ -131,9 +131,6 @@ S3 Vectorsが「ベクトルデータを保存できるベクターストアの�
 - S3 Vectorsのベクターバケットを作成する
 - Lambdaの実行ロールを作成
 - Lambdaの作成
-- ベクターバケットにデータを格納
-- 実行
-- AWS ToolkitでLambdaを修正する
 
 ## ハンズオン
 
@@ -167,15 +164,13 @@ export S3_VECTOR_BUCKET_NAME=my-vector-${AWS_ACCOUNT_ID}
 aws s3vectors list-vector-buckets --query "vectorBuckets[0].vectorBucketName" --output text
 ```
 
-### ベクターバケットにデータを格納
-
-AWS SDKでやります。
-
 ### Lambdaと実行ロールの作成
 
 todo: 執筆時点におけるLambdaは"boto3 version:1.38.36"であるため、boto3のバージョンを上げるために専用のレイヤーを作成します。
 
 AWS CDKでやります。
+
+todo: インデックスを作るLambda、put_vectorを実行するLambda、queryを実行するLambda、実行用のIAMロールのスタックを作成する。
 
 ## おまけ：AWSでイイ感じのリモート開発環境を構築して優勝する
 
