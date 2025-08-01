@@ -69,11 +69,11 @@ S3 Vectorsを知るためには、ベクトルとは何かを理解する必要�
 
 - Amazon Aurora for PostgreSQLとAmazon RDS for PostgreSQL
   - pgvectorを使ってベクトルデータを保存できる
-- Amazon Neptune ML 
+- Amazon Neptune ML
   - GraphRAGが実現できる
 - Amazon MemoryDB
   - MemoryDBベースのベクターデータベース
-- Amazon DocumentDB (MongoDB 互換) 
+- Amazon DocumentDB (MongoDB 互換)
   - Amazon SageMaker Canvasと組みわせてノーコード機械学習が可能
 
 [ベクターデータベースとは ベクターデータベースの説明 - AWS](https://aws.amazon.com/jp/what-is/vector-databases/)
@@ -88,7 +88,7 @@ S3 Vectorsが「ベクトルデータを保存できるベクターストアの�
 - ベクトル検索用のDBが必要であり、オブジェクトストレージにあるデータをお手軽にRAGできなかった
   - Knowledge base for Amazon BedrockとOpenSearchを組み合わせる方法がありますが、コストは比較的に高め
 - RDBやNoSQL系のマネージドサービスを使う必要がある
-    - ちょっとしたベクトル検索をするためにRDBやNoSQL系のマネージドサービスを使うのはオーバースペック※
+  - ちょっとしたベクトル検索をするためにRDBやNoSQL系のマネージドサービスを使うのはオーバースペック※
 - オブジェクトストレージとAWS SDKでベクトル検索ができるようになる
 
 ※ちょっとしたベクトル検索ではPineconeやFAISSなどのベクターデータベースを使うこともあります。Pineconeに至ってはAWSで利用できるためおすすめです。
@@ -107,24 +107,24 @@ S3 Vectorsが「ベクトルデータを保存できるベクターストアの�
 
 （※[日本語版](https://aws.amazon.com/jp/blogs/news/simplify-serverless-development-with-console-to-ide-and-remote-debugging-for-aws-lambda/)）
 
-
 なお、S3 Vectorsはコンソールでは実行できない操作があるため、AWS CLIを利用します。以上を踏まえて利用サービスとツールは以下のとおりです。
 
 利用サービス
 
 - Amazon S3 Vectors
 - Amazon Bedrock
-    - Titan Text Embeddings V2とTitan Embeddings G1 - Textを利用
+  - Titan Text Embeddings V2とTitan Embeddings G1 - Textを利用
 - AWS Lambda
-    - ランタイムはPython3を利用
+  - ランタイムはPython3を利用
 
 利用ツール
 
 - AWS CLI
-    - aws-cli/2.27.63 Python/3.13.5 Darwin/24.5.0 source/arm64
+  - aws-cli/2.27.63 Python/3.13.5 Darwin/24.5.0 source/arm64
 - AWS Toolkit for Visual Studio Code
-    - [リンク](https://docs.aws.amazon.com/ja_jp/toolkit-for-vscode/latest/userguide/welcome.html)
+  - [リンク](https://docs.aws.amazon.com/ja_jp/toolkit-for-vscode/latest/userguide/welcome.html)
 - AWS SDK for Python
+  - version 1.40.0
 
 ### 大まかな流れ
 
@@ -191,4 +191,3 @@ AWS CDKでやります。
 S3 VectorsのバケットはS3バケット同様に中身がある場合は削除できません。
 
 ## まとめ
-
