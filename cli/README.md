@@ -15,6 +15,10 @@
 
 ### By the way：CodeWhispererはどこいった
 
+結論から説明するとAmazon CodeWhispererはAmazon Q Developerの一部となりました。
+
+[参考：CodeWhisperer is becoming a part of Amazon Q Developer - CodeWhisperer](https://docs.aws.amazon.com/codewhisperer/latest/userguide/whisper-legacy.html)
+
 ## セットアップ方法
 
 ## 実際に触ってみる
