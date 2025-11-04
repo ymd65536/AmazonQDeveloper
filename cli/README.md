@@ -13,13 +13,15 @@
 
 ## Amazon Q Developerとは
 
-## どのへんがすごいのか
+### By the way：CodeWhispererはどこいった
 
 ## セットアップ方法
 
 ## 実際に触ってみる
 
 ## Amazon Q DeveloperをCLIで利用する
+
+## で、どのへんがすごいのか
 
 ## まとめ
 
