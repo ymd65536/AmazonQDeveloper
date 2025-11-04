@@ -22,3 +22,22 @@
 ## Amazon Q DeveloperをCLIで利用する
 
 ## まとめ
+
+## 参考情報
+
+GitHub リポジトリ
+
+- [Amazon Q Developer GitHub リポジトリ](https://github.com/aws/amazon-q-developer-cli)
+
+公式ドキュメント
+
+- [コマンドラインで Amazon Q Developer を使用する](https://docs.aws.amazon.com/ja_jp/amazonq/latest/qdeveloper-ug/command-line.html)
+
+AWS 公式ブログの関連リンク
+
+- [Amazon Q Developer を活用し自然言語を使って簡単に AWS CLI コマンドを実行](https://aws.amazon.com/jp/blogs/news/effortlessly-execute-aws-cli-commands-using-natural-language-with-amazon-q-developer/)
+- [Amazon Q Developer CLI での超高速な新しいエージェント型のコーディング体験](https://aws.amazon.com/jp/blogs/news/introducing-the-enhanced-command-line-interface-in-amazon-q-developer/)
+- [Exploring the latest features of the Amazon Q Developer CLI](https://aws.amazon.com/jp/blogs/devops/exploring-the-latest-features-of-the-amazon-q-developer-cli/)
+- [Amazon Q Developer CLI がターミナルでの画像入力をサポート](https://aws.amazon.com/jp/blogs/news/amazon-q-developer-cli-supports-image-inputs-in-your-terminal/)
+- [Amazon Q Developer CLI カスタムエージェントで開発の混乱を乗り越えよう](https://aws.amazon.com/jp/blogs/news/overcome-development-disarray-with-amazon-q-developer-cli-custom-agents/)
+- [Amazon Q Developer CLI を使用した運用のトラブルシューティング効率化](https://aws.amazon.com/jp/blogs/news/streamline-operational-troubleshooting-with-amazon-q-developer-cli/)
